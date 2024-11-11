@@ -1,0 +1,6 @@
+arcgis==2.4.0
+geojson==3.1.0
+owslib==0.32.0
+pyproj==3.7.0
+pygml==0.2.2
+geopy==2.4.1
