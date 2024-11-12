@@ -18,3 +18,4 @@ A tool for fetching stations of public transport in Czechia.
 | Czechia                     | train | https://gis.cenia.cz/geoserver/zeleznice_stanice/wms?service=wms                                                     |
 | Plzeň region                | bus   | https://mapy.plzensky-kraj.cz/ArcGIS/rest/services/zastavky/MapServer/1                                              |
 | Plzeň region                | train | https://mapy.plzensky-kraj.cz/ArcGIS/rest/services/zastavky/MapServer/0                                              |
+| South Moravian region       |       | https://www.idsjmk.cz/a/kontakty.html                                                                                |

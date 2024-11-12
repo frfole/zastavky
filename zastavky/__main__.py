@@ -13,6 +13,7 @@ import zastavky.fetch.plk
 import zastavky.fetch.ulk
 import zastavky.fetch.vlaky
 import zastavky.fetch.vys
+import zastavky.fetch.jhm
 from zastavky.post.dup import filter_same, as_stations
 
 
@@ -52,6 +53,7 @@ def main():
     arg_parser.add_argument("--plk", help="Fetches stations in Plzeň region", action="store_true")
     arg_parser.add_argument("--ulk", help="Fetches stations in Ustí nad Labem region", action="store_true")
     arg_parser.add_argument("--vys", help="Fetches stations in Vysočina region", action="store_true")
+    arg_parser.add_argument("--jhm", help="Fetches stations in South Moravian region", action="store_true")
     arg_parser.add_argument("--vlaky", help="Fetches train stations in Czechia", action="store_true")
     arg_parser.add_argument("--all", help="Fetches stations from all sources", action="store_true")
     arg_parser.add_argument("--dedup", help="Merges station of same name and location into one", action="store_false")
@@ -83,6 +85,9 @@ def main():
     if args.vys or args.all:
         print("Fetching in Vysočina region...")
         all_stations.extend(zastavky.fetch.vys.get_stations())
+    if args.jhm or args.all:
+        print("Fetching in South Moravian region...")
+        all_stations.extend(zastavky.fetch.jhm.get_stations())
     if args.vlaky or args.all:
         print("Fetching trains...")
         all_stations.extend(zastavky.fetch.vlaky.get_stations())
